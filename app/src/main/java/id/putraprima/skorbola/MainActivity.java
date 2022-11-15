@@ -3,6 +3,8 @@ package id.putraprima.skorbola;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentResolver;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import android.content.Intent;
@@ -83,13 +85,12 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         else if(requestCode == TEAM1_REQUEST_CODE){
-            if(data != null){
+            if(data != null) {
                 try {
                     uritim1 = data.getData();
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uritim1);
                     logotim1.setImageBitmap(bitmap);
-                }
-                catch (IOException error){
+                } catch (IOException error) {
                     Toast.makeText(this, "Can't load image", Toast.LENGTH_SHORT).show();
                     Log.e(TAG, error.getMessage());
                 }

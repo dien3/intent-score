@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/back2"
     tools:context=".ResultActivity">
 
     <TextView
@@ -60,7 +60,8 @@
     <ImageView
         android:id="@+id/home"
         android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_height="110dp"
+        android:layout_marginRight="100dp"
         android:layout_marginBottom="50dp"
         android:src="@drawable/homepage96"
         app:layout_constraintEnd_toEndOf="parent"
